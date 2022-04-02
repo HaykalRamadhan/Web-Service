@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+                <h2 class="display-4">Generate activity</h2>
+                <p>Find an activity here!</p>
+                <form>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text mb-3">Type</span>
+                        <select class="col-6" class="form-control" id="type">
+                            <option value="random">random</option>
+                            <option value="education">education</option>
+                            <option value="recreational">recreational</option>
+                            <option value="social">social</option>
+                            <option value="charity">charity</option>
+                            <option value="cooking">cooking</option>
+                            <option value="relaxation">relaxation</option>
+                            <option value="music">music</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text col-4">Participants</span>
+                        <input class="col-5"name="range1" id="range1" type="range" class="form-range" var="range">
+                        <output class="col-1" id="outputrange1"></output>
+                    </div>
+                    <button type="button" class="btn btn-success" id="btn-gen">Find</button>
+                </form>
+                <form>
+                    <h2 class="display-4">Result for you</h2>
+                    <p>An activity for you</p>
+                    <h3 id="result" style="font-family:sans-serif;">Not found activity for you</h3>
+                </form>
+            </div>
+        </div>
+    </head>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        var Range1 = document.getElementById('range1');
+        var bubble = document.getElementById('outputrange1');
+        Range1.addEventListener("input", () => {
+            bubble.innerHTML = range1.value;
+        });
+    </script>
+
+    <script src="scripts.js"></script>
+</html>
